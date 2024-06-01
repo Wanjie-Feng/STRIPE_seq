@@ -1,5 +1,5 @@
 # About
-This repository contains the key files and key analysis processes required for the stripe seq process for soybeans
+This repository contains the key files and analysis processes required for the stripe seq process for soybeans
 
 # Instructions
 - The 01Preprocessing_and_mapping.sh script covers the main steps from the fastq file to the downstream analysis.
