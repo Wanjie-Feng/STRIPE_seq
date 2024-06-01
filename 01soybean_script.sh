@@ -12,8 +12,6 @@ hisat2-build Gmax_rRNA.fa Gmax_rRNA -p 20
 
 # in order to using the R script to annotate the TSS on the genome, we need to convert the gff3 format using gffread.
 gffread Gmax_275_Wm82.a2.v1.gene.gff3 -o Gmax_v2.0_changed.gff3
-# run R script file:seperate_TSS_redup.R ,to covnert bam to bw file and extract the all TSS and TSR information
-
 cd ../..
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -60,9 +58,6 @@ hisat2 \
 
 # selected the high quaility reads mapped to the genome rather than organelles and rhizobium. 
 # we also ignore the reads mapped to scaffolds in the genome.
-samtools view -@ 20 -h -q 30 Nod.hisat.sam | samtools sort - -@ 20 -o Nod.hisat.bam
-samtools index Nod.hisat.bam -@ 20
-
 samtools view -@ 20 -h -q 30 Nod.hisat.sam | perl -nlae 'print if !(/JX|NC|scaff/i)' | samtools sort - -@ 20 -o Nod.soy.hisat.bam
 samtools index Nod.soy.hisat.bam -@ 20
 
