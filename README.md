@@ -2,8 +2,8 @@
 This repository contains the key files and key analysis processes required for the stripe seq process for soybeans
 
 # Instructions
-- The 01soybean_script.sh script covers the main steps from the fastq file to the downstream analysis.
-- The 02New_TSS_redup.ipynb file is actually a series of R commands for the downstream analysis process.
+- The 01Preprocessing_and_mapping.sh script covers the main steps from the fastq file to the downstream analysis.
+- The 02CAGEfightR_for_downstream_analysis.ipynb file is actually a series of R commands for the downstream analysis process.
 
 You can arrange your data according to the directory structure in the warehouse for repeatable analysis.
 
