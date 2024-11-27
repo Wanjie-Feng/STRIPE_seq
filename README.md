@@ -12,3 +12,5 @@ You can arrange your data according to the directory structure in the warehouse 
 # Related
 Xutong Wang, Jingbo Duan, Chancelor B. Clark, Wanjie Feng, Jianxin Ma(2024). Widespread transcription initiation within coding sequences marks tissue identity and accessible chromatin in soybean.
 https://www.biorxiv.org/content/10.1101/2024.03.27.587116v1
+Wang, X., Duan, J., Clark, C. B., Feng, W., & Ma, J. (2024). Noncanonical transcription initiation is primarily tissue specific and epigenetically tuned in paleopolyploid plants. The Plant Cell, koae288.
+https://academic.oup.com/plcell/advance-article/doi/10.1093/plcell/koae288/7900478
