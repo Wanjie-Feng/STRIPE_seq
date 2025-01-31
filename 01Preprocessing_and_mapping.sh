@@ -6,11 +6,11 @@ cd soybean_data/genome_file
 # merge soybean genome, mt, chlp and rhizobia genome to a single fatsa file
 cat Gmax_275_v2.0.fa mtchlp.fa USDA110.fa > Gmax_USDA_org.fa
 
-# build genoome index
+# build genome index
 hisat2-build Gmax_USDA_org.fa Gmax_USDA110 -p 20 
 hisat2-build Gmax_rRNA.fa Gmax_rRNA -p 20
 
-# in order to using the R script to annotate the TSS on the genome, we need to convert the gff3 format using gffread.
+# in order to use the R script to annotate the TSS on the genome, we need to convert the gff3 format using gffread.
 gffread Gmax_275_Wm82.a2.v1.gene.gff3 -o Gmax_v2.0_changed.gff3
 cd ../..
 # ----------------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ hisat2 \
     -U Nod.keep.fasta \
     -S Nod.hisat.sam
 
-# selected the high quaility reads mapped to the genome rather than organelles and rhizobium. 
+# selected the high quality reads mapped to the genome rather than organelles and rhizobium. 
 # we also ignore the reads mapped to scaffolds in the genome.
 samtools view -@ 20 -h -q 30 Nod.hisat.sam | perl -nlae 'print if !(/JX|NC|scaff/i)' | samtools sort - -@ 20 -o Nod.soy.hisat.bam
 samtools index Nod.soy.hisat.bam -@ 20
